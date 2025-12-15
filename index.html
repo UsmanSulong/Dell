@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Solution Proposal - Usman Sulong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dell: {
+                            blue: '#007DB8',
+                            dark: '#00447C',
+                            gray: '#F0F0F0',
+                            text: '#444444'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        .slide-in { animation: slideIn 0.8s ease-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hidden-lang { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <!-- Fake Dell Logo for Demo -->
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full border-2 border-dell-blue flex items-center justify-center">
+                            <span class="text-dell-blue font-bold text-xs transform -rotate-12">E</span>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-gray-800">Dell Technologies</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm font-medium text-gray-500">Candidate: Usman Sulong</span>
+                    <button onclick="toggleLanguage()" class="bg-dell-blue hover:bg-dell-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        <span id="lang-btn-text">Switch to THAI</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white pt-32 pb-20 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-in">
+            <div class="inline-block bg-dell-blue text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
+                <span class="en">Tech Refresh Proposal</span>
+                <span class="th hidden-lang">ข้อเสนอการปรับปรุงระบบไอที</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-light text-gray-900 mb-6">
+                <span class="en">Accelerating Dyson R&D Innovation</span>
+                <span class="th hidden-lang">ขับเคลื่อนนวัตกรรม R&D ของ Dyson ให้เหนือกว่า</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                <span class="en">Presenting the Dell PowerStore Advantage for High-Performance Graphic Workloads.</span>
+                <span class="th hidden-lang">นำเสนอข้อได้เปรียบของ Dell PowerStore สำหรับงานกราฟิกประสิทธิภาพสูง</span>
+            </p>
+            <div class="flex justify-center items-center gap-2 text-sm text-gray-500">
+                <span class="en">Presented by:</span>
+                <span class="th hidden-lang">นำเสนอโดย:</span>
+                <span class="font-bold text-dell-blue">Usman Sulong</span>
+                <span>|</span>
+                <span>Inside Solutions Architect Candidate</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ASSIGNMENT CONTEXT SECTION (NEW) -->
+    <section class="py-10 bg-dell-blue/5 border-b border-dell-blue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-bold text-dell-dark mb-4 border-b pb-2 border-dell-dark/20">
+                <span class="en">Assignment Briefing: The Context</span>
+                <span class="th hidden-lang">โจทย์การนำเสนอ: บริบทและภูมิหลัง</span>
+            </h2>
+            <p class="text-base text-gray-700 leading-relaxed">
+                <span class="en">Dyson is seeking a high-performance, low-latency storage solution for their critical R&D graphic design workloads, replacing their 7-year-old HPE 3PAR storage. The current focus is on Pure Storage, which highlights its advanced 5:1 Data Reduction capability. Crucially, Dyson will *not* be refreshing their recently purchased Dell GPU Servers, making integration paramount. Dell has been invited to propose a superior solution comparison.</span>
+                <span class="th hidden-lang">Dyson กำลังมองหาโซลูชัน Storage ที่มีประสิทธิภาพสูงและมีความหน่วงต่ำ สำหรับงานออกแบบกราฟิก R&D ที่สำคัญ โดยจะมาแทนที่ HPE 3PAR ที่ใช้งานมา 7 ปี ปัจจุบันลูกค้าให้ความสนใจ Pure Storage ซึ่งนำเสนอความสามารถในการลดข้อมูล (Data Reduction) ขั้นสูงถึง 5:1 สิ่งที่สำคัญคือ Dyson จะ *ไม่* ทำการปรับปรุง Dell GPU Server ที่เพิ่งซื้อเมื่อปีที่แล้ว ดังนั้นการเชื่อมต่อที่เป็นเนื้อเดียวกัน (Integration) จึงเป็นหัวใจสำคัญ Dell ถูกเชิญให้เข้ามานำเสนอการเปรียบเทียบโซลูชันที่เหนือกว่า</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- The Challenge Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="slide-in">
+                    <h2 class="text-3xl font-light text-gray-900 mb-6 border-l-4 border-dell-blue pl-4">
+                        <span class="en">The Challenge: Bottlenecks in Creativity</span>
+                        <span class="th hidden-lang">ความท้าทาย: คอขวดของการสร้างสรรค์</span>
+                    </h2>
+                    <ul class="space-y-4 text-lg text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✕</span>
+                            <span>
+                                <strong class="en">Aging Infrastructure:</strong>
+                                <strong class="th hidden-lang">โครงสร้างพื้นฐานที่ล้าสมัย:</strong>
+                                <span class="en">HPE 3PAR is 7 years old, risking downtime.</span>
+                                <span class="th hidden-lang">HPE 3PAR อายุ 7 ปี เสี่ยงต่อการหยุดทำงาน</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✕</span>
+                            <span>
+                                <strong class="en">R&D Demands:</strong>
+                                <strong class="th hidden-lang">ความต้องการของ R&D:</strong>
+                                <span class="en">High performance & low latency needed for complex graphic design.</span>
+                                <span class="th hidden-lang">ต้องการประสิทธิภาพสูงและความหน่วงต่ำสำหรับงานกราฟิกที่ซับซ้อน</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2">!</span>
+                            <span>
+                                <strong class="en">Competitive Landscape:</strong>
+                                <strong class="th hidden-lang">สถานการณ์การแข่งขัน:</strong>
+                                <span class="en">Pure Storage claims 5:1 data reduction, but at what cost to latency?</span>
+                                <span class="th hidden-lang">Pure Storage อ้างการลดข้อมูล 5:1 แต่จะกระทบต่อความหน่วงหรือไม่?</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg slide-in flex flex-col items-center justify-center h-64 border border-gray-200">
+                    <div class="text-6xl text-gray-300 mb-4">
+                        <!-- Placeholder Icon -->
+                         📊
+                    </div>
+                    <p class="text-center font-medium text-gray-500">
+                        <span class="en"></span>
+                        <span class="th hidden-lang">[ภาพเปรียบเทียบกราฟความหน่วง Latency]</span>
+                    </p>
+                    <p class="text-sm text-center text-gray-400 mt-2">
+                        <span class="en">Current System vs. R&D Needs</span>
+                        <span class="th hidden-lang">ระบบปัจจุบันเทียบกับความต้องการ R&D</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Deep Dive Section (NEW: For Specialist Role) -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-light text-gray-900 mb-10 text-center">
+                <span class="en">Technical Deep Dive: Engineered for R&D</span>
+                <span class="th hidden-lang">เจาะลึกทางเทคนิค: ออกแบบมาเพื่อ R&D โดยเฉพาะ</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-100">
+                    <div class="text-dell-blue text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="en">NVMe-oF Support</span>
+                        <span class="th hidden-lang">รองรับ NVMe-oF</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span class="en">Utilizes NVMe over Fabrics (TCP/FC) to deliver direct-attach performance over the network. Essential for GPU server throughput.</span>
+                        <span class="th hidden-lang">ใช้เทคโนโลยี NVMe over Fabrics เพื่อส่งข้อมูลผ่านเครือข่ายได้เร็วเหมือนต่อตรง จำเป็นมากสำหรับการส่งข้อมูลให้ GPU Server</span>
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-100">
+                    <div class="text-dell-blue text-4xl mb-4">📦</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="en">Container-Based OS</span>
+                        <span class="th hidden-lang">สถาปัตยกรรมแบบ Container</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span class="en">PowerStoreOS is container-based, allowing for non-disruptive upgrades and rapid feature deployment without hardware swaps.</span>
+                        <span class="th hidden-lang">ระบบปฏิบัติการแบบ Container ช่วยให้อัปเกรดฟีเจอร์ใหม่ได้ทันทีโดยไม่ต้องหยุดระบบและไม่ต้องเปลี่ยนฮาร์ดแวร์</span>
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-100">
+                    <div class="text-dell-blue text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="en">AppsON Capability</span>
+                        <span class="th hidden-lang">ฟีเจอร์ AppsON</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span class="en">The only storage array with a built-in hypervisor. Run data-intensive R&D apps directly on the storage for zero network latency.</span>
+                        <span class="th hidden-lang">Storage เดียวที่มี Hypervisor ในตัว สามารถรันแอป R&D หนักๆ บนเครื่อง Storage ได้เลย ตัดปัญหาความหน่วงเครือข่ายเป็นศูนย์</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Efficiency Analysis (NEW: Addressing the Cost/Value) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-light text-gray-900 mb-10 text-center">
+                <span class="en">The Cost Advantage: Why Dell Wins on Value</span>
+                <span class="th hidden-lang">ความคุ้มค่าที่เหนือกว่า: ทำไม Dell ถึงชนะเรื่องต้นทุน</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-dell-dark mb-4">
+                        <span class="en">1. Total Cost of Ownership (TCO)</span>
+                        <span class="th hidden-lang">1. ต้นทุนรวมในการเป็นเจ้าของ (TCO)</span>
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">✓</span>
+                            <span>
+                                <strong class="en">Unified Management:</strong>
+                                <span class="th hidden-lang">การจัดการแบบรวมศูนย์:</span>
+                                <span class="en">Managing Dell Servers + Storage via CloudIQ reduces OpEx and training costs.</span>
+                                <span class="th hidden-lang">ดูแลทั้ง Server และ Storage ผ่าน CloudIQ ช่วยลดค่าใช้จ่ายในการดำเนินงาน (OpEx) และค่าฝึกอบรม</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">✓</span>
+                            <span>
+                                <strong class="en">Single Support Contract:</strong>
+                                <span class="th hidden-lang">สัญญาบริการเดียว:</span>
+                                <span class="en">ProSupport covers the entire stack. No need to pay premium for 3rd party vendor integration support.</span>
+                                <span class="th hidden-lang">ProSupport ครอบคลุมทั้งระบบ ไม่ต้องเสียเงินเพิ่มสำหรับการแก้ปัญหาข้ามค่าย</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-dell-dark mb-4">
+                        <span class="en">2. Data Reduction Reality</span>
+                        <span class="th hidden-lang">2. ความจริงเรื่องการลดขนาดข้อมูล</span>
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">✓</span>
+                            <span>
+                                <strong class="en">Guaranteed Efficiency:</strong>
+                                <span class="th hidden-lang">ประสิทธิภาพที่การันตีได้:</span>
+                                <span class="en">Dell guarantees 4:1 DRR. Pure's 5:1 is marketing-heavy and may introduce latency penalties for graphic files.</span>
+                                <span class="th hidden-lang">Dell การันตี 4:1 แน่นอน ในขณะที่ 5:1 ของ Pure อาจทำให้ไฟล์กราฟิกทำงานช้าลง (Latency)</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">✓</span>
+                            <span>
+                                <strong class="en">Anytime Upgrade:</strong>
+                                <span class="th hidden-lang">การอัปเกรดที่คุ้มค่า:</span>
+                                <span class="en">Dell's program allows controller upgrades without rebuying capacity, matching Pure's Evergreen but with better hardware scale.</span>
+                                <span class="th hidden-lang">โปรแกรมของ Dell ช่วยให้อัปเกรด Controller ได้โดยไม่ต้องซื้อความจุใหม่ คุ้มค่าในระยะยาว</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- The "Better Together" Strategy (The Win) -->
+    <section class="py-20 bg-dell-dark text-white relative overflow-hidden">
+        <!-- Decoration circle -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-dell-blue opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        <span class="en">The Unfair Advantage: "Better Together"</span>
+                        <span class="th hidden-lang">ข้อได้เปรียบที่เหนือกว่า: "พลังแห่งความเป็นหนึ่งเดียว"</span>
+                    </h2>
+                    <p class="text-lg text-blue-100 mb-6">
+                        <span class="en">Since Dyson already utilizes Dell GPU Servers, integrating Dell PowerStore creates an optimized ecosystem that Pure Storage cannot match.</span>
+                        <span class="th hidden-lang">เนื่องจาก Dyson ใช้งาน Dell GPU Server อยู่แล้ว การรวม Dell PowerStore เข้าไปจะสร้างระบบนิเวศที่มีประสิทธิภาพสูงสุดที่ Pure Storage ไม่สามารถเทียบได้</span>
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-400 flex items-center justify-center text-dell-dark text-xs font-bold">✓</div>
+                            <span class="en">Single Vendor Support (No finger-pointing)</span>
+                            <span class="th hidden-lang">การสนับสนุนจากผู้ผลิตรายเดียว (แก้ปัญหาจบในที่เดียว)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-400 flex items-center justify-center text-dell-dark text-xs font-bold">✓</div>
+                            <span class="en">Unified Management via CloudIQ</span>
+                            <span class="th hidden-lang">บริหารจัดการทั้ง Server และ Storage ผ่านหน้าจอเดียวด้วย CloudIQ</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-400 flex items-center justify-center text-dell-dark text-xs font-bold">✓</div>
+                            <span class="en">Optimized I/O Path for GPU Workloads</span>
+                            <span class="th hidden-lang">ปรับแต่งเส้นทางข้อมูล (I/O) ให้เร็วที่สุดสำหรับงาน GPU</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-2 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div class="bg-gray-100 rounded border border-gray-200 h-64 flex flex-col items-center justify-center p-4">
+                        <span class="text-4xl mb-2">🖥️ + 💾 = 🚀</span>
+                        <p class="text-gray-800 font-bold text-center">
+                            <span class="en"></span>
+                            <span class="th hidden-lang">[ภาพ Dell GPU Server เชื่อมต่อกับ PowerStore]</span>
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2 text-center">
+                            <span class="en">Seamless Integration</span>
+                            <span class="th hidden-lang">การเชื่อมต่อที่ไร้รอยต่อ</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+             <h2 class="text-2xl font-bold text-center text-gray-800 mb-10">
+                <span class="en">Why Dell Wins Over Pure Storage</span>
+                <span class="th hidden-lang">ทำไม Dell ถึงชนะ Pure Storage</span>
+            </h2>
+            <div class="bg-white shadow overflow-hidden rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feature</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-dell-blue uppercase tracking-wider font-bold">Dell PowerStore</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pure Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span class="en">Architecture</span>
+                                <span class="th hidden-lang">สถาปัตยกรรม</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Container-based (Adaptable)</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Traditional proprietary</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span class="en">Integration with Dyson's Servers</span>
+                                <span class="th hidden-lang">การทำงานร่วมกับ Server เดิม</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-bold">Native / Optimized</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Third-party connection</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span class="en">AppsON (Run Apps on Storage)</span>
+                                <span class="th hidden-lang">AppsON (รันแอปบน Storage)</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-bold">Yes (Built-in Hypervisor)</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">No</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span class="en">Cost Efficiency (TCO)</span>
+                                <span class="th hidden-lang">ความคุ้มค่า (TCO)</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">High (Unified Management)</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Med (Separate silos)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="font-bold text-lg">Usman Sulong</p>
+                <p class="text-gray-400 text-sm">Inside Solutions Architect Candidate</p>
+            </div>
+            <div class="text-gray-400 text-sm">
+                &copy; 2025 Presentation for Dell Technologies Interview.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Logic
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('.en');
+            const thElements = document.querySelectorAll('.th');
+            const btnText = document.getElementById('lang-btn-text');
+
+            if (currentLang === 'en') {
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                thElements.forEach(el => el.classList.remove('hidden-lang'));
+                btnText.textContent = 'Switch to ENG';
+                currentLang = 'th';
+            } else {
+                thElements.forEach(el => el.classList.add('hidden-lang'));
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                btnText.textContent = 'Switch to THAI';
+                currentLang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>
