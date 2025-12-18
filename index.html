@@ -20,9 +20,19 @@
         body {
             font-family: 'Sarabun', sans-serif;
         }
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+        .spec-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+        .spec-value {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
         }
     </style>
 </head>
@@ -32,32 +42,30 @@
     <nav class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo Section -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center gap-2">
-                        <div class="w-8 h-8 bg-[#007db8] rounded-full flex items-center justify-center text-white font-bold text-lg">
-                            D
-                        </div>
+                    <div class="flex-shrink-0 flex items-center gap-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Dell_Technologies_logo.svg" 
+                             alt="Dell Technologies Logo" 
+                             class="h-6 md:h-8">
+                        <div class="h-8 w-[1px] bg-gray-200 hidden sm:block"></div>
                         <div class="flex flex-col">
-                            <span class="font-bold text-xl tracking-tight text-[#007db8]">Dell Technologies</span>
-                            <span class="text-xs text-gray-500 hidden sm:block">Proposal for Dyson</span>
+                            <span class="font-bold text-sm tracking-tight text-[#007db8]">Official Proposal</span>
+                            <span class="text-[10px] text-gray-500 hidden sm:block uppercase tracking-wider">Prepared for Dyson</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#challenge" class="text-gray-600 hover:text-[#007db8] transition" data-key="nav.challenge">โจทย์ลูกค้า</a>
-                    <a href="#solutions" class="text-gray-600 hover:text-[#007db8] transition" data-key="nav.solution">โซลูชัน</a>
-                    <a href="#whydell" class="text-gray-600 hover:text-[#007db8] transition" data-key="nav.comparison">เปรียบเทียบ</a>
+                    <a href="#challenge" class="text-gray-600 hover:text-[#007db8] transition font-medium" data-key="nav.challenge">โจทย์ลูกค้า</a>
+                    <a href="#whydell" class="text-gray-600 hover:text-[#007db8] transition font-medium" data-key="nav.comparison">เปรียบเทียบ</a>
+                    <a href="#solutions" class="text-gray-600 hover:text-[#007db8] transition font-medium" data-key="nav.solution">โซลูชัน</a>
                     
-                    <button id="lang-toggle-desktop" class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-sm font-medium hover:bg-gray-200 transition">
+                    <button id="lang-toggle-desktop" class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-sm font-bold hover:bg-gray-200 transition border border-gray-200">
                         <i data-lucide="globe" class="w-4 h-4"></i>
                         <span id="lang-label-desktop">EN</span>
                     </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-600">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -66,12 +74,11 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#challenge" class="block px-3 py-2 text-gray-600" data-key="nav.challenge">โจทย์ลูกค้า</a>
-                <a href="#solutions" class="block px-3 py-2 text-gray-600" data-key="nav.solution">โซลูชัน</a>
                 <a href="#whydell" class="block px-3 py-2 text-gray-600" data-key="nav.comparison">เปรียบเทียบ</a>
+                <a href="#solutions" class="block px-3 py-2 text-gray-600" data-key="nav.solution">โซลูชัน</a>
                 <button id="lang-toggle-mobile" class="w-full text-left px-3 py-2 text-[#007db8] font-bold">
                     Switch Language
                 </button>
@@ -80,502 +87,476 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="bg-[#007db8] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="bg-[#007db8] text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
             <div class="md:w-2/3">
-                <div class="inline-block bg-[#005f8d] px-3 py-1 rounded-md text-sm mb-4 font-semibold">
-                    <span data-key="nav.presenter">Usman Sulong</span> - <span data-key="nav.role">Inside Solutions Architect Candidate</span>
+                <div class="inline-block bg-[#005f8d] px-3 py-1.5 rounded-md text-xs mb-6 font-bold uppercase tracking-widest border border-white/20">
+                    <span data-key="nav.presenter">Usman Sulong</span> - <span data-key="nav.role">Specialist 2, Inside Product (Thai Speaking)</span>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" data-key="hero.title">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-key="hero.title">
                     ขับเคลื่อนนวัตกรรม Dyson สู่อนาคต
                 </h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl" data-key="hero.desc">
-                    โซลูชัน High Performance Storage เพื่อรองรับงาน Graphic Design และ R&D ที่เหนือกว่า
+                <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl font-light" data-key="hero.desc">
+                    High Performance Storage Ecosystem เพื่อรองรับงาน R&D และ GPU Compute
                 </p>
-                <a href="#solutions" class="inline-flex items-center bg-white text-[#007db8] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
-                    <span data-key="hero.cta">ดูข้อเสนอ</span> <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                </a>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#whydell" class="inline-flex items-center justify-center bg-white text-[#007db8] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-0.5">
+                        <span data-key="hero.cta">ดูการเปรียบเทียบ</span> <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Challenge Section -->
-    <section id="challenge" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-key="challenge.title">สถานการณ์ปัจจุบันและความท้าทาย</h2>
+    <section id="challenge" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800" data-key="challenge.title">สถานการณ์ปัจจุบันและความท้าทาย</h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <!-- As-Is -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gray-400">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-gray-600">
-                    <i data-lucide="database" class="mr-2"></i> <span data-key="challenge.current">ระบบปัจจุบัน (As-Is)</span>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-gray-400">
+                <h3 class="text-xl font-bold mb-6 flex items-center text-gray-600">
+                    <i data-lucide="database" class="mr-3"></i> <span data-key="challenge.current">ระบบปัจจุบัน (As-Is)</span>
                 </h3>
-                <ul class="space-y-3">
+                <ul class="space-y-4">
                     <li class="flex items-start text-gray-600">
-                        <i data-lucide="x-circle" class="mr-2 text-red-400 flex-shrink-0 mt-1 w-4 h-4"></i>
+                        <i data-lucide="x-circle" class="mr-3 text-red-400 flex-shrink-0 mt-1 w-5 h-5"></i>
                         <span data-key="challenge.currentList.0">ใช้ HPE 3PAR Storage อายุการใช้งาน 7 ปี (Outdated)</span>
                     </li>
                     <li class="flex items-start text-gray-600">
-                        <i data-lucide="x-circle" class="mr-2 text-red-400 flex-shrink-0 mt-1 w-4 h-4"></i>
+                        <i data-lucide="x-circle" class="mr-3 text-red-400 flex-shrink-0 mt-1 w-5 h-5"></i>
                         <span data-key="challenge.currentList.1">เพิ่งลงทุนซื้อ Dell GPU Server รุ่นใหม่เมื่อปีที่แล้ว</span>
                     </li>
                     <li class="flex items-start text-gray-600">
-                        <i data-lucide="x-circle" class="mr-2 text-red-400 flex-shrink-0 mt-1 w-4 h-4"></i>
+                        <i data-lucide="x-circle" class="mr-3 text-red-400 flex-shrink-0 mt-1 w-5 h-5"></i>
                         <span data-key="challenge.currentList.2">จัดเก็บไฟล์งาน Graphic Design สำหรับแผนก R&D</span>
                     </li>
                 </ul>
             </div>
-            <!-- To-Be -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-[#007db8]">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-[#007db8]">
-                    <i data-lucide="trending-up" class="mr-2"></i> <span data-key="challenge.need">ความต้องการ (To-Be)</span>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-[#007db8]">
+                <h3 class="text-xl font-bold mb-6 flex items-center text-[#007db8]">
+                    <i data-lucide="trending-up" class="mr-3"></i> <span data-key="challenge.need">ความต้องการ (To-Be)</span>
                 </h3>
-                <ul class="space-y-3">
+                <ul class="space-y-4">
                     <li class="flex items-start text-gray-700">
-                        <i data-lucide="check-circle" class="mr-2 text-green-500 flex-shrink-0 mt-1 w-4 h-4"></i>
+                        <i data-lucide="check-circle" class="mr-3 text-green-500 flex-shrink-0 mt-1 w-5 h-5"></i>
                         <span data-key="challenge.needList.0">ต้องการ High Performance & Low Latency Solution</span>
                     </li>
                     <li class="flex items-start text-gray-700">
-                        <i data-lucide="check-circle" class="mr-2 text-green-500 flex-shrink-0 mt-1 w-4 h-4"></i>
-                        <span data-key="challenge.needList.1">มองหา Data Reduction (เปรียบเทียบกับคำเคลม 5:1 ของ Pure)</span>
+                        <i data-lucide="check-circle" class="mr-3 text-green-500 flex-shrink-0 mt-1 w-5 h-5"></i>
+                        <span data-key="challenge.needList.1">มองหา Data Reduction ที่มีประสิทธิภาพจริง</span>
                     </li>
                     <li class="flex items-start text-gray-700">
-                        <i data-lucide="check-circle" class="mr-2 text-green-500 flex-shrink-0 mt-1 w-4 h-4"></i>
-                        <span data-key="challenge.needList.2">ต้องการระบบที่เสถียรและคุ้มค่าที่สุด</span>
+                        <i data-lucide="check-circle" class="mr-3 text-green-500 flex-shrink-0 mt-1 w-5 h-5"></i>
+                        <span data-key="challenge.needList.2">ต้องการความคุ้มค่า (TCO) และ Ecosystem ที่ทำงานร่วมกันได้ดี</span>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Dell Section & Comparison Table -->
+    <section id="whydell" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800" data-key="whyDell.title">ทำไมต้อง Dell Technologies?</h2>
+                <p class="text-[#007db8] font-bold mt-3 tracking-wide" data-key="whyDell.subtitle">ชนะคู่แข่ง (Pure Storage) ด้วย 4 ปัจจัยหลัก</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-[#007db8] mb-6">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-800" data-key="whyDell.points.0.title">Better Together Ecosystem</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed" data-key="whyDell.points.0.desc">Dyson มี Dell GPU Server อยู่แล้ว การเลือก Dell Storage จะลดความเสี่ยงเรื่อง Compatibility และได้ประสิทธิภาพสูงสุด</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-[#007db8] mb-6">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-800" data-key="whyDell.points.1.title">Superior TCO & Lifecycle</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed" data-key="whyDell.points.1.desc">โปรแกรม Future-Proof และ Lifecycle Extension ช่วยให้การ Refresh ง่าย ไม่ต้องทำ Forklift Migration</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-[#007db8] mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-800" data-key="whyDell.points.2.title">End-to-End Support</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed" data-key="whyDell.points.2.desc">จุดติดต่อเดียวทั้ง Server และ Storage แก้ปัญหาได้เร็วกว่า ไม่มีการโยนความรับผิดชอบ</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-[#007db8] mb-6">
+                        <i data-lucide="database" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-800" data-key="whyDell.points.3.title">Flexible Scalability</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed" data-key="whyDell.points.3.desc">เริ่มเล็กและขยายได้ตามต้องการ ยืดหยุ่นกว่าคู่แข่งที่มักบังคับเริ่มด้วยชุดใหญ่ราคาสูง</p>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="bg-gray-800 text-white py-5 text-center font-bold text-lg" data-key="comparison.title">
+                    ตารางเปรียบเทียบ: Dell vs Pure Storage
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-gray-50 border-b">
+                                <th class="p-5 text-gray-500 font-bold uppercase text-xs tracking-wider">Topic</th>
+                                <th class="p-5 text-[#007db8] font-extrabold text-lg w-2/5" data-key="comparison.dellCol">Dell Technologies</th>
+                                <th class="p-5 text-gray-400 font-bold text-lg w-2/5" data-key="comparison.pureCol">Pure Storage</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-blue-50/30 transition">
+                                <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.0.name">ความเข้ากันได้</td>
+                                <td class="p-5">
+                                    <div class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-900 font-semibold" data-key="comparison.rows.0.dell">Validated Design กับ Dell GPU</span>
+                                    </div>
+                                </td>
+                                <td class="p-5 text-gray-500" data-key="comparison.rows.0.pure">ต้องทดสอบความเข้ากันได้เอง</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50/30 transition">
+                                <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.1.name">สถาปัตยกรรม</td>
+                                <td class="p-5">
+                                    <div class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-900 font-semibold" data-key="comparison.rows.1.dell">End-to-End NVMe Ecosystem</span>
+                                    </div>
+                                </td>
+                                <td class="p-5 text-gray-500" data-key="comparison.rows.1.pure">Proprietary Flash Module</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50/30 transition bg-blue-50/10">
+                                <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.4.name">ประมาณการราคา</td>
+                                <td class="p-5">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-[#007db8] font-bold text-lg" data-key="comparison.rows.4.dellTitle">US$ 150K - 250K+</span>
+                                        <span class="text-xs text-gray-500 leading-tight" data-key="comparison.rows.4.dellDesc">(Cluster 3 nodes F710 / ขึ้นกับ SSD และ Region)</span>
+                                    </div>
+                                </td>
+                                <td class="p-5 text-gray-500">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-gray-700 font-bold text-lg" data-key="comparison.rows.4.pureTitle">US$ 200K+ Ballpark</span>
+                                        <span class="text-xs text-gray-400 leading-tight" data-key="comparison.rows.4.pureDesc">(FlashBlade ชุดเริ่มต้น / มองว่าเป็น solution ที่มีราคาสูง)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-blue-50/30 transition">
+                                <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.3.name">การสนับสนุน</td>
+                                <td class="p-5">
+                                    <div class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-gray-900 font-semibold" data-key="comparison.rows.3.dell">ProSupport ดูแลทั้ง Stack</span>
+                                    </div>
+                                </td>
+                                <td class="p-5 text-gray-500" data-key="comparison.rows.3.pure">ดูแลเฉพาะ Storage Part</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Solutions Section -->
-    <section id="solutions" class="bg-gray-100 py-16">
+    <section id="solutions" class="bg-gray-100 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-800" data-key="solutions.title">โซลูชันแนะนำจาก Dell Technologies</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-key="solutions.subtitle">
-                เลือกโซลูชันที่ออกแบบมาเพื่อทำงานร่วมกับ Dell GPU Server อย่างสมบูรณ์แบบ
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-key="solutions.subtitle">
+                รายละเอียดทางเทคนิคและข้อมูลการเสนอราคาสำหรับ Dyson
             </p>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Product 1: PowerScale -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
-                        <div class="flex justify-between items-start">
+            <div class="grid lg:grid-cols-2 gap-10 mb-12">
+                <!-- Product 1: PowerScale F710 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 flex flex-col">
+                    <div class="bg-gradient-to-r from-purple-800 to-indigo-800 p-8 text-white">
+                        <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold" data-key="solutions.f710.name">PowerScale F710</h3>
-                                <span class="text-sm bg-white/20 px-2 py-1 rounded mt-2 inline-block" data-key="solutions.f710.tag">
+                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.f710.name">PowerScale F710</h3>
+                                <span class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold uppercase tracking-wider" data-key="solutions.f710.tag">
                                     สำหรับ Unstructured Data & AI
                                 </span>
                             </div>
-                            <i data-lucide="server" class="opacity-80 w-8 h-8"></i>
+                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/storage/power-scale/spi/dell-powerscale-f710-bestof-500-front.png?fmt=png-alpha&wid=173&hei=100&align=0,0" 
+                                 alt="PowerScale F710" class="h-16 drop-shadow-lg">
                         </div>
+                        <p class="text-purple-100 text-sm leading-relaxed" data-key="solutions.f710.desc">
+                            Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, R&D และ AI Dataset
+                        </p>
                     </div>
-                    <div class="p-8">
-                        <p class="text-gray-600 mb-6" data-key="solutions.f710.desc">ที่สุดของ Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, Media และ AI Dataset</p>
-                        <div class="space-y-4">
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.f710.features.0">Scale-out: ยิ่งเพิ่ม Node ประสิทธิภาพยิ่งสูง</span>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-bold text-gray-800 mb-4 border-b pb-2 text-sm uppercase tracking-widest">Technical Specifications</h4>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-6">
+                            <div>
+                                <p class="spec-label">Workloads</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.0">AI, GenAI & EDA</p>
                             </div>
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.f710.features.1">NVMe Performance: รองรับงานไฟล์ขนาดใหญ่</span>
+                            <div>
+                                <p class="spec-label">ECC Memory / Node</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.1">512 GB</p>
                             </div>
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.f710.features.2">ความจุเริ่มต้น: ~100-300 TB (Cluster 3 Nodes)</span>
+                            <div>
+                                <p class="spec-label">Raw Node Capacity</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.2">38 TB - 1.2 PB</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Raw Cluster Capacity</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.3">115 TB - 307 PB</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Storage Type</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.4">NVMe SSD (TLC, QLC)</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Data Reduction</p>
+                                <p class="spec-value" data-key="solutions.f710.specs.5">Inline Supported</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 2: PowerStore -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-[#007db8] to-blue-500 p-6 text-white">
-                        <div class="flex justify-between items-start">
+                <!-- Product 2: PowerStore 5200T -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 flex flex-col">
+                    <div class="bg-gradient-to-r from-[#007db8] to-blue-700 p-8 text-white">
+                        <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold" data-key="solutions.ps5200.name">PowerStore 5200T</h3>
-                                <span class="text-sm bg-white/20 px-2 py-1 rounded mt-2 inline-block" data-key="solutions.ps5200.tag">
+                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.ps5200.name">PowerStore 5200T</h3>
+                                <span class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold uppercase tracking-wider" data-key="solutions.ps5200.tag">
                                     สำหรับ Infra & Scratch Volume
                                 </span>
                             </div>
-                            <i data-lucide="database" class="opacity-80 w-8 h-8"></i>
+                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/storage-systems/powerstore/dbcs-254500-powerstore-base-bezel-1200x390.png?fmt=png-alpha&wid=173&hei=100&align=0,0" 
+                                 alt="PowerStore 5200T" class="h-16 drop-shadow-lg">
+                        </div>
+                        <p class="text-blue-100 text-sm leading-relaxed" data-key="solutions.ps5200.desc">
+                            Unified Block & File Storage อัจฉริยะ Low Latency เหมาะกับ VM และ Database
+                        </p>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-bold text-gray-800 mb-4 border-b pb-2 text-sm uppercase tracking-widest">Technical Specifications</h4>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-6">
+                            <div>
+                                <p class="spec-label">Processor</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.0">4 Intel CPUs, 96 Cores</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Max Memory</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.1">1152 GB</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Max Capacity</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.2">5.9 PBe / Appliance</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Max Drives</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.3">93 / Appliance</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Network Support</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.4">10/25/100GbE, 32Gb FC</p>
+                            </div>
+                            <div>
+                                <p class="spec-label">Volume Support</p>
+                                <p class="spec-value" data-key="solutions.ps5200.specs.5">16,000 Volumes</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-8">
-                        <p class="text-gray-600 mb-6" data-key="solutions.ps5200.desc">Unified Block & File Storage อัจฉริยะ ที่มีความหน่วงต่ำ (Low Latency) เหมาะกับ VM และ Database</p>
-                        <div class="space-y-4">
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.ps5200.features.0">Unified: รองรับทั้ง Block และ File ในตัวเดียว</span>
-                            </div>
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.ps5200.features.1">Data Reduction: การันตี 4:1 (Average) แบบ Always-on</span>
-                            </div>
-                            <div class="flex items-center text-gray-700">
-                                <div class="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                                <span data-key="solutions.ps5200.features.2">Anytime Upgrade: อัปเกรดคอนโทรลเลอร์ได้โดยไม่หยุดระบบ</span>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Pricing Info Block -->
+            <div class="bg-blue-50 border-l-4 border-[#007db8] p-8 rounded-r-2xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <i data-lucide="info" class="text-[#007db8] w-6 h-6"></i>
+                    <h3 class="text-xl font-bold text-gray-800" data-key="pricing.title">สถานะของราคา (Pricing Status)</h3>
+                </div>
+                <div class="text-gray-700 space-y-4 leading-relaxed">
+                    <p data-key="pricing.intro">Dell ไม่แสดงราคาบนหน้าเว็บของ PowerScale F710 และ PowerStore โดยตรง แต่ระบุให้ "Contact Sales" เพื่อขอใบเสนอราคาอย่างเป็นทางการ เนื่องจากเป็นอุปกรณ์ระดับองค์กร (Enterprise Solution) ราคาจึงมีความผันแปรตามปัจจัยหลักดังนี้:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#007db8]"></i>
+                                <span data-key="pricing.factors.0">ขนาดและจำนวนของโหนด (Nodes) ที่ต้องการขยายตัว</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#007db8]"></i>
+                                <span data-key="pricing.factors.1">ความจุสุทธิ (จำนวนและประเภทของ NVMe SSD)</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#007db8]"></i>
+                                <span data-key="pricing.factors.2">ฟีเจอร์เสริม (OneFS Licenses, Multi-Protocol)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-[#007db8]"></i>
+                                <span data-key="pricing.factors.3">ข้อเสนอพิเศษหรือโปรโมชัน ณ ช่วงเวลาจัดซื้อ</span>
+                            </li>
+                        </ul>
                     </div>
+                    <p class="text-sm italic font-medium mt-4 text-gray-500" data-key="pricing.source">ข้อมูลอ้างอิงจากแหล่งข้อมูลทางการ [dell.com], [router-switch.com]</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Dell Section -->
-    <section id="whydell" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-gray-800" data-key="whyDell.title">ทำไมต้อง Dell Technologies?</h2>
-            <p class="text-[#007db8] font-semibold mt-2" data-key="whyDell.subtitle">ชนะคู่แข่ง (Pure Storage) ด้วย 4 ปัจจัยหลัก</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Point 1 -->
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#007db8] mb-4">
-                    <i data-lucide="cpu" class="w-8 h-8"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2 text-gray-800" data-key="whyDell.points.0.title">Better Together Ecosystem</h3>
-                <p class="text-sm text-gray-600 leading-relaxed" data-key="whyDell.points.0.desc">Dyson มี Dell GPU Server อยู่แล้ว การเลือก Dell Storage ที่มี Validated Design จะลดความเสี่ยงเรื่อง Compatibility และได้ Performance สูงสุด</p>
-            </div>
-            <!-- Point 2 -->
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#007db8] mb-4">
-                    <i data-lucide="trending-up" class="w-8 h-8"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2 text-gray-800" data-key="whyDell.points.1.title">Superior TCO & Lifecycle</h3>
-                <p class="text-sm text-gray-600 leading-relaxed" data-key="whyDell.points.1.desc">โปรแกรม Future-Proof และ Lifecycle Extension ช่วยให้การ Refresh ในอนาคตทำได้ง่าย ไม่ต้องทำ Forklift Migration เหมือนคู่แข่ง</p>
-            </div>
-            <!-- Point 3 -->
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#007db8] mb-4">
-                    <i data-lucide="shield-check" class="w-8 h-8"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2 text-gray-800" data-key="whyDell.points.2.title">End-to-End Support</h3>
-                <p class="text-sm text-gray-600 leading-relaxed" data-key="whyDell.points.2.desc">จุดติดต่อเดียว (Single Point of Contact) ทั้ง Server และ Storage แก้ปัญหาได้เร็วกว่า ไม่มีการโยนความรับผิดชอบระหว่าง Vendor</p>
-            </div>
-            <!-- Point 4 -->
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#007db8] mb-4">
-                    <i data-lucide="database" class="w-8 h-8"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2 text-gray-800" data-key="whyDell.points.3.title">Flexible Scalability</h3>
-                <p class="text-sm text-gray-600 leading-relaxed" data-key="whyDell.points.3.desc">เริ่มเล็กและขยายได้ตามต้องการ (Start Small, Grow Big) ด้วย PowerScale ที่ยืดหยุ่นกว่า FlashBlade ของคู่แข่งที่เริ่มด้วยขนาดใหญ่และราคาสูง</p>
-            </div>
-        </div>
-
-        <!-- Comparison Table -->
-        <div class="mt-20 bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-            <div class="bg-gray-800 text-white p-4 text-center font-bold text-lg" data-key="comparison.title">
-                ตารางเปรียบเทียบ: Dell vs Pure Storage
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="bg-gray-50 border-b">
-                            <th class="p-4 text-gray-500 font-medium">Topic</th>
-                            <th class="p-4 text-[#007db8] font-bold text-lg w-2/5" data-key="comparison.dellCol">Dell Technologies</th>
-                            <th class="p-4 text-gray-400 font-bold text-lg w-2/5" data-key="comparison.pureCol">Pure Storage</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-700" data-key="comparison.rows.0.name">ความเข้ากันได้</td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-800 font-medium" data-key="comparison.rows.0.dell">Validated Design กับ Dell GPU</span>
-                                </div>
-                            </td>
-                            <td class="p-4 text-gray-500" data-key="comparison.rows.0.pure">ต้องทดสอบความเข้ากันได้เอง</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-700" data-key="comparison.rows.1.name">สถาปัตยกรรม</td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-800 font-medium" data-key="comparison.rows.1.dell">End-to-End NVMe Ecosystem</span>
-                                </div>
-                            </td>
-                            <td class="p-4 text-gray-500" data-key="comparison.rows.1.pure">Proprietary Flash Module</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-700" data-key="comparison.rows.2.name">การขยายตัว</td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-800 font-medium" data-key="comparison.rows.2.dell">Scale-out แยก Compute/Capacity ได้</span>
-                                </div>
-                            </td>
-                            <td class="p-4 text-gray-500" data-key="comparison.rows.2.pure">ข้อจำกัดในบางรุ่น (Chassis Based)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition">
-                            <td class="p-4 font-medium text-gray-700" data-key="comparison.rows.3.name">การสนับสนุน</td>
-                            <td class="p-4">
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-800 font-medium" data-key="comparison.rows.3.dell">ProSupport ดูแลทั้ง Stack</span>
-                                </div>
-                            </td>
-                            <td class="p-4 text-gray-500" data-key="comparison.rows.3.pure">ดูแลเฉพาะ Storage Part</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="mb-6 flex justify-center">
-                <div class="w-12 h-12 bg-[#007db8] rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    U
-                </div>
+            <div class="mb-8 flex justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Dell_Technologies_logo.svg" 
+                     alt="Dell Technologies Logo White" 
+                     class="h-8 brightness-0 invert opacity-50">
             </div>
-            <h2 class="text-2xl font-bold mb-2" data-key="nav.presenter">Usman Sulong</h2>
-            <p class="text-gray-400 mb-8" data-key="footer.role">Inside Solutions Architect Candidate</p>
-            <div class="flex justify-center gap-6 text-sm text-gray-500">
-                <span>Proposal created for Dyson</span>
-                <span>•</span>
-                <span>Dell Technologies</span>
+            <h2 class="text-3xl font-bold mb-3" data-key="nav.presenter">Usman Sulong</h2>
+            <p class="text-blue-400 font-medium mb-10 text-lg" data-key="footer.role">Specialist 2, Inside Product (Thai Speaking)</p>
+            <div class="flex justify-center gap-8 text-sm text-gray-500 border-t border-white/5 pt-10">
+                <span class="font-medium">Proposal created for Dyson</span>
+                <span class="opacity-20">|</span>
+                <span>Dell Technologies 2024</span>
             </div>
-            <p class="mt-8 text-xs text-gray-700">© 2024 Usman Sulong. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript Logic -->
     <script>
-        // Content Dictionary
         const content = {
             th: {
-                nav: {
-                    presenter: "Usman Sulong",
-                    role: "Inside Solutions Architect Candidate",
-                    challenge: "โจทย์ลูกค้า",
-                    solution: "โซลูชัน",
-                    comparison: "เปรียบเทียบ",
-                    contact: "ติดต่อ"
-                },
-                hero: {
-                    title: "ขับเคลื่อนนวัตกรรม Dyson สู่อนาคต",
-                    desc: "โซลูชัน High Performance Storage เพื่อรองรับงาน Graphic Design และ R&D ที่เหนือกว่า",
-                    cta: "ดูข้อเสนอ"
-                },
+                nav: { presenter: "Usman Sulong", role: "Specialist 2, Inside Product (Thai Speaking)", challenge: "โจทย์ลูกค้า", solution: "โซลูชัน", comparison: "เปรียบเทียบ" },
+                hero: { title: "ขับเคลื่อนนวัตกรรม Dyson สู่อนาคต", desc: "High Performance Storage Ecosystem เพื่อรองรับงาน R&D และ GPU Compute", cta: "ดูการเปรียบเทียบ" },
                 challenge: {
                     title: "สถานการณ์ปัจจุบันและความท้าทาย",
                     current: "ระบบปัจจุบัน (As-Is)",
-                    currentList: [
-                        "ใช้ HPE 3PAR Storage อายุการใช้งาน 7 ปี (Outdated)",
-                        "เพิ่งลงทุนซื้อ Dell GPU Server รุ่นใหม่เมื่อปีที่แล้ว",
-                        "จัดเก็บไฟล์งาน Graphic Design สำหรับแผนก R&D"
-                    ],
+                    currentList: ["ใช้ HPE 3PAR Storage อายุการใช้งาน 7 ปี (Outdated)", "เพิ่งลงทุนซื้อ Dell GPU Server รุ่นใหม่เมื่อปีที่แล้ว", "จัดเก็บไฟล์งาน Graphic Design สำหรับแผนก R&D"],
                     need: "ความต้องการ (To-Be)",
-                    needList: [
-                        "ต้องการ High Performance & Low Latency Solution",
-                        "มองหา Data Reduction (เปรียบเทียบกับคำเคลม 5:1 ของ Pure)",
-                        "ต้องการระบบที่เสถียรและคุ้มค่าที่สุด"
-                    ]
-                },
-                solutions: {
-                    title: "โซลูชันแนะนำจาก Dell Technologies",
-                    subtitle: "เลือกโซลูชันที่ออกแบบมาเพื่อทำงานร่วมกับ Dell GPU Server อย่างสมบูรณ์แบบ",
-                    f710: {
-                        name: "PowerScale F710",
-                        tag: "สำหรับ Unstructured Data & AI",
-                        desc: "ที่สุดของ Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, Media และ AI Dataset",
-                        features: [
-                            "Scale-out: ยิ่งเพิ่ม Node ประสิทธิภาพยิ่งสูง",
-                            "NVMe Performance: รองรับงานไฟล์ขนาดใหญ่",
-                            "ความจุเริ่มต้น: ~100-300 TB (Cluster 3 Nodes)"
-                        ]
-                    },
-                    ps5200: {
-                        name: "PowerStore 5200T",
-                        tag: "สำหรับ Infra & Scratch Volume",
-                        desc: "Unified Block & File Storage อัจฉริยะ ที่มีความหน่วงต่ำ (Low Latency) เหมาะกับ VM และ Database",
-                        features: [
-                            "Unified: รองรับทั้ง Block และ File ในตัวเดียว",
-                            "Data Reduction: การันตี 4:1 (Average) แบบ Always-on",
-                            "Anytime Upgrade: อัปเกรดคอนโทรลเลอร์ได้โดยไม่หยุดระบบ"
-                        ]
-                    }
+                    needList: ["ต้องการ High Performance & Low Latency Solution", "มองหา Data Reduction ที่มีประสิทธิภาพจริง", "ต้องการความคุ้มค่า (TCO) และ Ecosystem ที่ทำงานร่วมกันได้ดี"]
                 },
                 whyDell: {
                     title: "ทำไมต้อง Dell Technologies?",
                     subtitle: "ชนะคู่แข่ง (Pure Storage) ด้วย 4 ปัจจัยหลัก",
                     points: [
-                        {
-                            title: "Better Together Ecosystem",
-                            desc: "Dyson มี Dell GPU Server อยู่แล้ว การเลือก Dell Storage ที่มี Validated Design จะลดความเสี่ยงเรื่อง Compatibility และได้ Performance สูงสุด"
-                        },
-                        {
-                            title: "Superior TCO & Lifecycle",
-                            desc: "โปรแกรม Future-Proof และ Lifecycle Extension ช่วยให้การ Refresh ในอนาคตทำได้ง่าย ไม่ต้องทำ Forklift Migration เหมือนคู่แข่ง"
-                        },
-                        {
-                            title: "End-to-End Support",
-                            desc: "จุดติดต่อเดียว (Single Point of Contact) ทั้ง Server และ Storage แก้ปัญหาได้เร็วกว่า ไม่มีการโยนความรับผิดชอบระหว่าง Vendor"
-                        },
-                        {
-                            title: "Flexible Scalability",
-                            desc: "เริ่มเล็กและขยายได้ตามต้องการ (Start Small, Grow Big) ด้วย PowerScale ที่ยืดหยุ่นกว่า FlashBlade ของคู่แข่งที่เริ่มด้วยขนาดใหญ่และราคาสูง"
-                        }
+                        { title: "Better Together Ecosystem", desc: "Dyson มี Dell GPU Server อยู่แล้ว การเลือก Dell Storage จะลดความเสี่ยงเรื่อง Compatibility และได้ประสิทธิภาพสูงสุด" },
+                        { title: "Superior TCO & Lifecycle", desc: "โปรแกรม Future-Proof และ Lifecycle Extension ช่วยให้การ Refresh ง่าย ไม่ต้องทำ Forklift Migration" },
+                        { title: "End-to-End Support", desc: "จุดติดต่อเดียวทั้ง Server และ Storage แก้ปัญหาได้เร็วกว่า ไม่มีการโยนความรับผิดชอบ" },
+                        { title: "Flexible Scalability", desc: "เริ่มเล็กและขยายได้ตามต้องการ ยืดหยุ่นกว่าคู่แข่งที่มักบังคับเริ่มด้วยชุดใหญ่ราคาสูง" }
                     ]
                 },
                 comparison: {
                     title: "ตารางเปรียบเทียบ: Dell vs Pure Storage",
-                    dellCol: "Dell Technologies",
-                    pureCol: "Pure Storage",
+                    dellCol: "Dell Technologies", pureCol: "Pure Storage",
                     rows: [
-                        { name: "ความเข้ากันได้", dell: "Validated Design กับ Dell GPU", pure: "ต้องทดสอบความเข้ากันได้เอง" },
-                        { name: "สถาปัตยกรรม", dell: "End-to-End NVMe Ecosystem", pure: "Proprietary Flash Module" },
-                        { name: "การขยายตัว", dell: "Scale-out แยก Compute/Capacity ได้", pure: "ข้อจำกัดในบางรุ่น (Chassis Based)" },
-                        { name: "การสนับสนุน", dell: "ProSupport ดูแลทั้ง Stack", pure: "ดูแลเฉพาะ Storage Part" }
-                    ]
-                },
-                footer: {
-                    role: "Inside Solutions Architect Candidate"
-                }
-            },
-            en: {
-                nav: {
-                    presenter: "Usman Sulong",
-                    role: "Inside Solutions Architect Candidate",
-                    challenge: "Challenge",
-                    solution: "Solution",
-                    comparison: "Comparison",
-                    contact: "Contact"
-                },
-                hero: {
-                    title: "Powering Dyson's Innovation",
-                    desc: "High-Performance Storage Solutions designed to elevate Graphic Design & R&D workloads.",
-                    cta: "View Proposal"
-                },
-                challenge: {
-                    title: "Current Landscape & Challenges",
-                    current: "Current State (As-Is)",
-                    currentList: [
-                        "Legacy HPE 3PAR Storage (7 years old/EoL)",
-                        "Recently acquired new Dell GPU Servers",
-                        "Storing critical R&D Graphic Design assets"
-                    ],
-                    need: "Business Needs (To-Be)",
-                    needList: [
-                        "Require High Performance & Low Latency Solution",
-                        "Seeking high Data Reduction (Comparing to Pure's 5:1 claim)",
-                        "Looking for stability and best TCO"
+                        { name: "ความเข้ากันได้" }, { name: "สถาปัตยกรรม" },
+                        { name: "ประมาณการราคา", dellTitle: "US$ 150K - 250K+", dellDesc: "(Cluster 3 nodes F710 / ขึ้นกับ SSD และ Region)", pureTitle: "US$ 200K+ Ballpark", pureDesc: "(FlashBlade ชุดเริ่มต้น / มองว่าเป็น solution ที่มีราคาสูง)" },
+                        { name: "การสนับสนุน" }
                     ]
                 },
                 solutions: {
-                    title: "Recommended Solutions",
-                    subtitle: "Choosing solutions designed to work perfectly with your existing Dell GPU Servers",
+                    title: "โซลูชันแนะนำจาก Dell Technologies",
+                    subtitle: "รายละเอียดทางเทคนิคและข้อมูลการเสนอราคาสำหรับ Dyson",
                     f710: {
-                        name: "PowerScale F710",
-                        tag: "For Unstructured Data & AI",
-                        desc: "The ultimate All-Flash Scale-out File Storage. Perfect for high-end graphics, media, and AI datasets.",
-                        features: [
-                            "Scale-out: Linear performance growth with each node",
-                            "NVMe Performance: Optimized for large file workloads",
-                            "Entry Capacity: ~100-300 TB (3-Node Cluster)"
-                        ]
+                        name: "PowerScale F710", tag: "สำหรับ Unstructured Data & AI",
+                        desc: "Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, R&D และ AI Dataset",
+                        specs: ["AI, GenAI & EDA Workloads", "512 GB", "38 TB - 1.2 PB", "115 TB - 307 PB", "NVMe SSD (TLC, QLC)", "Inline Supported"]
                     },
                     ps5200: {
-                        name: "PowerStore 5200T",
-                        tag: "For Infra & Scratch Volumes",
-                        desc: "Intelligent Unified Block & File Storage with ultra-low latency. Ideal for VMs and Databases.",
-                        features: [
-                            "Unified: Block and File in a single appliance",
-                            "Data Reduction: Guaranteed 4:1 (Average) Always-on",
-                            "Anytime Upgrade: Controller upgrades without downtime"
-                        ]
+                        name: "PowerStore 5200T", tag: "สำหรับ Infra & Scratch Volume",
+                        desc: "Unified Block & File Storage อัจฉริยะ Low Latency เหมาะกับ VM และ Database",
+                        specs: ["4 Intel CPUs, 96 Cores (2.2 GHz)", "1152 GB", "Up to 5.9 PBe / Appliance", "93 / Appliance (372 / Cluster)", "10/25/100GbE, 32Gb FC", "16,000 Volumes"]
                     }
+                },
+                pricing: {
+                    title: "สถานการณ์ของราคา (Pricing Status)",
+                    intro: "Dell ไม่แสดงราคาบนหน้าเว็บของ PowerScale F710 และ PowerStore โดยตรง แต่ระบุให้ \"Contact Sales\" เพื่อขอใบเสนอราคาอย่างเป็นทางการ เนื่องจากเป็นอุปกรณ์ระดับองค์กร (Enterprise Solution) ราคาจึงมีความผันแปรตามปัจจัยหลักดังนี้:",
+                    factors: [
+                        "ขนาดและจำนวนของโหนด (Nodes) ที่ต้องการขยายตัว",
+                        "ความจุสุทธิ (จำนวนและประเภทของ NVMe SSD)",
+                        "ฟีเจอร์เสริม (เช่น OneFS Licenses, Multi-Protocol)",
+                        "ข้อเสนอพิเศษหรือโปรโมชัน ณ ช่วงเวลาจัดซื้อ"
+                    ],
+                    source: "ข้อมูลอ้างอิงจากแหล่งข้อมูลทางการ [dell.com], [router-switch.com]"
+                },
+                footer: { role: "Specialist 2, Inside Product (Thai Speaking)" }
+            },
+            en: {
+                nav: { presenter: "Usman Sulong", role: "Specialist 2, Inside Product (Thai Speaking)", challenge: "Challenge", solution: "Solution", comparison: "Comparison" },
+                hero: { title: "Powering Dyson's Innovation", desc: "High Performance Storage Ecosystem for R&D and GPU Compute workloads.", cta: "View Comparison" },
+                challenge: {
+                    title: "Current Landscape & Challenges",
+                    current: "Current State (As-Is)",
+                    currentList: ["Legacy HPE 3PAR Storage (7 years old/EoL)", "Recently acquired Dell GPU Servers", "Storing critical R&D Graphic Design assets"],
+                    need: "Business Needs (To-Be)",
+                    needList: ["High Performance & Low Latency Solution", "Seeking efficient Data Reduction", "Better TCO and Unified Ecosystem"]
                 },
                 whyDell: {
                     title: "Why Dell Technologies?",
                     subtitle: "Winning against Pure Storage with 4 Key Pillars",
                     points: [
-                        {
-                            title: "Better Together Ecosystem",
-                            desc: "Since Dyson utilizes Dell GPU Servers, choosing Dell Storage ensures a Validated Design, minimizing compatibility risks and maximizing throughput."
-                        },
-                        {
-                            title: "Superior TCO & Lifecycle",
-                            desc: "Our Future-Proof Program and Lifecycle Extension make future refreshes seamless, avoiding the costly forklift migrations required by competitors."
-                        },
-                        {
-                            title: "End-to-End Support",
-                            desc: "Single Point of Contact for both Server and Storage means faster resolution times and no vendor-blaming games."
-                        },
-                        {
-                            title: "Flexible Scalability",
-                            desc: "Start Small, Grow Big with PowerScale's flexibility, unlike competitors' FlashBlade which often requires high entry costs and large initial sizing."
-                        }
+                        { title: "Better Together Ecosystem", desc: "Since Dyson already uses Dell GPU Servers, Dell Storage ensures seamless integration and peak performance." },
+                        { title: "Superior TCO & Lifecycle", desc: "Future-Proof and Lifecycle programs ensure easy refreshes without costly forklift migrations." },
+                        { title: "End-to-End Support", desc: "Single point of contact for both Server and Storage leads to faster resolution." },
+                        { title: "Flexible Scalability", desc: "Start small and grow big. More flexible entry points compared to competitors' bulkier solutions." }
                     ]
                 },
                 comparison: {
                     title: "Comparison: Dell vs Pure Storage",
-                    dellCol: "Dell Technologies",
-                    pureCol: "Pure Storage",
+                    dellCol: "Dell Technologies", pureCol: "Pure Storage",
                     rows: [
-                        { name: "Compatibility", dell: "Validated Design with Dell GPU", pure: "Requires Self-Validation" },
-                        { name: "Architecture", dell: "End-to-End NVMe Ecosystem", pure: "Proprietary Flash Module" },
-                        { name: "Scalability", dell: "Flexible Scale-out", pure: "Chassis Based Limitations" },
-                        { name: "Support", dell: "ProSupport (Full Stack)", pure: "Storage Only" }
+                        { name: "Compatibility" }, { name: "Architecture" },
+                        { name: "Estimated Price", dellTitle: "US$ 150K - 250K+", dellDesc: "(3-node F710 Cluster / Varies by SSD & region)", pureTitle: "US$ 200K+ Ballpark", pureDesc: "(Entry FlashBlade / Viewed as high-priced solution)" },
+                        { name: "Support" }
                     ]
                 },
-                footer: {
-                    role: "Candidate for Inside Solutions Architect"
-                }
+                solutions: {
+                    title: "Recommended Solutions",
+                    subtitle: "Technical specifications and pricing information for Dyson",
+                    f710: {
+                        name: "PowerScale F710", tag: "For Unstructured Data & AI",
+                        desc: "All-Flash Scale-out File Storage. Ideal for Graphic, R&D, and AI Datasets.",
+                        specs: ["AI, GenAI & EDA Workloads", "512 GB", "38 TB - 1.2 PB", "115 TB - 307 PB", "NVMe SSD (TLC, QLC)", "Inline Supported"]
+                    },
+                    ps5200: {
+                        name: "PowerStore 5200T", tag: "For Infra & Scratch Volumes",
+                        desc: "Intelligent Unified Block & File Storage. Ideal for VMs and Databases.",
+                        specs: ["4 Intel CPUs, 96 Cores (2.2 GHz)", "1152 GB", "Up to 5.9 PBe / Appliance", "93 / Appliance (372 / Cluster)", "10/25/100GbE, 32Gb FC", "16,000 Volumes"]
+                    }
+                },
+                pricing: {
+                    title: "Pricing Status",
+                    intro: "Dell does not display direct pricing for PowerScale F710 and PowerStore on the public website. Official pricing requires a 'Contact Sales' request as these are Enterprise-grade solutions where costs depend on several variables:",
+                    factors: [
+                        "Size and number of Nodes required for scalability",
+                        "Raw capacity requirements (NVMe SSD types and counts)",
+                        "Software features (OneFS licenses, Multi-protocol support)",
+                        "Current regional offers or volume promotions"
+                    ],
+                    source: "Reference from official sources [dell.com], [router-switch.com]"
+                },
+                footer: { role: "Specialist 2, Inside Product (Thai Speaking)" }
             }
         };
 
         let currentLang = 'th';
 
-        // Function to update content based on language
         function updateContent(lang) {
             currentLang = lang;
-            
-            // Helper function to resolve nested keys
-            const getNestedValue = (obj, path) => {
-                return path.split('.').reduce((prev, curr) => prev ? prev[curr] : null, obj);
-            };
-
-            // Update all elements with data-key attribute
+            const getNestedValue = (obj, path) => path.split('.').reduce((prev, curr) => prev ? prev[curr] : null, obj);
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 const value = getNestedValue(content[lang], key);
-                if (value) {
-                    el.textContent = value;
-                }
+                if (value) el.textContent = value;
             });
-
-            // Update Language Button Text
-            const btnText = lang === 'th' ? 'EN' : 'TH';
-            document.getElementById('lang-label-desktop').textContent = btnText;
+            document.getElementById('lang-label-desktop').textContent = lang === 'th' ? 'EN' : 'TH';
             document.getElementById('lang-toggle-mobile').textContent = lang === 'th' ? 'Switch to English' : 'เปลี่ยนเป็นภาษาไทย';
         }
 
-        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Event Listeners
-        document.getElementById('lang-toggle-desktop').addEventListener('click', () => {
-            const newLang = currentLang === 'th' ? 'en' : 'th';
-            updateContent(newLang);
-        });
-
+        document.getElementById('lang-toggle-desktop').addEventListener('click', () => updateContent(currentLang === 'th' ? 'en' : 'th'));
         document.getElementById('lang-toggle-mobile').addEventListener('click', () => {
-            const newLang = currentLang === 'th' ? 'en' : 'th';
-            updateContent(newLang);
+            updateContent(currentLang === 'th' ? 'en' : 'th');
             document.getElementById('mobile-menu').classList.add('hidden');
         });
-
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
     </script>
 </body>
 </html>
