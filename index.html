@@ -24,15 +24,22 @@
             scroll-behavior: smooth;
         }
         .spec-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #6b7280;
             text-transform: uppercase;
-            letter-spacing: 0.025em;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
         }
         .spec-value {
-            font-size: 0.875rem;
+            font-size: 0.825rem;
             font-weight: 600;
             color: #1f2937;
+            line-height: 1.25;
+        }
+        .model-card {
+            border-left: 3px solid #e5e7eb;
+            padding-left: 10px;
+            margin-bottom: 12px;
         }
     </style>
 </head>
@@ -195,22 +202,6 @@
                                     </div>
                                 </td>
                             </tr>
-                            <!-- Price Row -->
-                            <tr class="hover:bg-blue-50/30 transition bg-blue-50/20">
-                                <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.price.name">ราคาประมาณการ</td>
-                                <td class="p-5">
-                                    <div class="flex flex-col gap-1">
-                                        <span class="text-[#007db8] font-bold text-xl" data-key="comparison.rows.price.dellTitle">US$ 150K - 250K+</span>
-                                        <span class="text-xs text-gray-500 leading-tight" data-key="comparison.rows.price.dellDesc">(Cluster 3 nodes F710 / ขึ้นกับ SSD และ Region)</span>
-                                    </div>
-                                </td>
-                                <td class="p-5 text-gray-400">
-                                    <div class="flex flex-col gap-1">
-                                        <span class="font-bold text-xl" data-key="comparison.rows.price.pureTitle">US$ 200K+ Ballpark</span>
-                                        <span class="text-xs text-gray-400 leading-tight" data-key="comparison.rows.price.pureDesc">(FlashBlade ชุดเริ่มต้น / Solution ราคาสูง)</span>
-                                    </div>
-                                </td>
-                            </tr>
                             <tr class="hover:bg-blue-50/30 transition">
                                 <td class="p-5 font-bold text-gray-700" data-key="comparison.rows.0.name">ความเข้ากันได้</td>
                                 <td class="p-5 text-gray-900 font-semibold" data-key="comparison.rows.0.dell">Validated Design กับ Dell GPU</td>
@@ -238,11 +229,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-800" data-key="solutions.title">โซลูชันแนะนำจาก Dell Technologies</h2>
             <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto" data-key="solutions.subtitle">
-                รายละเอียดทางเทคนิคและข้อมูลการเสนอราคาสำหรับ Dyson
+                รายละเอียดรุ่นที่แนะนำแบ่งตามขนาดและลักษณะการใช้งานสำหรับ Dyson
             </p>
             
             <div class="grid lg:grid-cols-2 gap-10 mb-12">
-                <!-- Product 1: PowerScale F710 -->
+                <!-- Product 1: PowerScale -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 flex flex-col border border-gray-100">
                     <div class="bg-gradient-to-r from-purple-800 to-indigo-800 p-8 text-white relative overflow-hidden">
                         <div class="absolute -right-10 -bottom-10 opacity-10">
@@ -250,48 +241,56 @@
                         </div>
                         <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.f710.name">PowerScale F710</h3>
+                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.f710.name">PowerScale</h3>
                                 <span class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold uppercase tracking-wider" data-key="solutions.f710.tag">
-                                    สำหรับ Unstructured Data & AI
+                                    Unstructured Data, Graphic & AI
                                 </span>
                             </div>
                             <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/storage/power-scale/spi/dell-powerscale-f710-bestof-500-front.png?fmt=png-alpha&wid=173&hei=100&align=0,0" 
-                                 alt="PowerScale F710" class="h-16 drop-shadow-lg">
+                                 alt="PowerScale" class="h-16 drop-shadow-lg">
                         </div>
                         <p class="text-purple-100 text-sm leading-relaxed mb-6" data-key="solutions.f710.desc">
-                            Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, R&D และ AI Dataset
+                            Workloads: Graphic, Media, AI, Big Data, Cloud-Native
                         </p>
-                        <a href="https://www.delltechnologies.com/asset/en-us/products/storage/technical-support/h15963-ss-powerscale-all-flash-nodes.pdf" 
-                           target="_blank"
-                           class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-bold transition border border-white/20">
-                            <i data-lucide="download" class="w-4 h-4 text-purple-200"></i>
-                            <span data-key="solutions.f710.specLink">h15963-ss-powerscale-all-flash-nodes.pdf</span>
-                        </a>
+                        <div class="flex gap-2">
+                             <span class="text-[10px] bg-purple-700/50 border border-white/20 px-2 py-1 rounded">Scale-out</span>
+                             <span class="text-[10px] bg-purple-700/50 border border-white/20 px-2 py-1 rounded">All-Flash NVMe</span>
+                        </div>
                     </div>
                     <div class="p-8 flex-grow">
-                        <h4 class="font-bold text-gray-800 mb-4 border-b pb-2 text-sm uppercase tracking-widest">Technical Specifications</h4>
-                        <div class="grid grid-cols-2 gap-y-4 gap-x-6">
-                            <div>
-                                <p class="spec-label">Workloads</p>
-                                <p class="spec-value" data-key="solutions.f710.specs.0">AI, GenAI & EDA</p>
+                        <h4 class="font-bold text-gray-800 mb-6 border-b pb-2 text-sm uppercase tracking-widest" data-key="solutions.modelTitle">ข้อมูล Model ที่แนะนำ</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="model-card border-purple-200">
+                                <p class="spec-label">Entry-Level</p>
+                                <p class="spec-value" data-key="solutions.f710.models.0">PowerScale F200</p>
+                                <p class="text-[10px] text-gray-500">(Edge, ไฟล์ขนาดเล็ก)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">ECC Memory / Node</p>
-                                <p class="spec-value" data-key="solutions.f710.specs.1">512 GB</p>
+                            <div class="model-card border-purple-300">
+                                <p class="spec-label">Mid-Range</p>
+                                <p class="spec-value" data-key="solutions.f710.models.1">PowerScale F600</p>
+                                <p class="text-[10px] text-gray-500">(AI, Analytics ขนาดกลาง)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">Raw Node Capacity</p>
-                                <p class="spec-value" data-key="solutions.f710.specs.2">38 TB - 1.2 PB</p>
+                            <div class="model-card border-purple-500">
+                                <p class="spec-label">High-End</p>
+                                <p class="spec-value" data-key="solutions.f710.models.2">PowerScale F900</p>
+                                <p class="text-[10px] text-gray-500">(Media Rendering, HPC)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">Raw Cluster Capacity</p>
-                                <p class="spec-value" data-key="solutions.f710.specs.3">115 TB - 307 PB</p>
+                            <div class="model-card border-purple-700">
+                                <p class="spec-label">Ultra High-End</p>
+                                <p class="spec-value" data-key="solutions.f710.models.3">PowerScale F810 / F910</p>
+                                <p class="text-[10px] text-gray-500">(AI, Big Data, R&D)</p>
+                            </div>
+                            <div class="model-card border-gray-300">
+                                <p class="spec-label">Archive / Hybrid</p>
+                                <p class="spec-value" data-key="solutions.f710.models.4">A300/A3000 & H Series</p>
+                                <p class="text-[10px] text-gray-500">(เก็บระยะยาว / Balance Perf)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 2: PowerStore 5200T -->
+                <!-- Product 2: PowerStore -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 flex flex-col border border-gray-100">
                     <div class="bg-gradient-to-r from-[#007db8] to-blue-700 p-8 text-white relative overflow-hidden">
                         <div class="absolute -right-10 -bottom-10 opacity-10">
@@ -299,42 +298,45 @@
                         </div>
                         <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.ps5200.name">PowerStore 5200T</h3>
+                                <h3 class="text-2xl font-bold mb-1" data-key="solutions.ps5200.name">PowerStore</h3>
                                 <span class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold uppercase tracking-wider" data-key="solutions.ps5200.tag">
-                                    สำหรับ Infra & Scratch Volume
+                                    VM, Database & Transactional
                                 </span>
                             </div>
                             <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/storage-systems/powerstore/dbcs-254500-powerstore-base-bezel-1200x390.png?fmt=png-alpha&wid=173&hei=100&align=0,0" 
-                                 alt="PowerStore 5200T" class="h-16 drop-shadow-lg">
+                                 alt="PowerStore" class="h-16 drop-shadow-lg">
                         </div>
                         <p class="text-blue-100 text-sm leading-relaxed mb-6" data-key="solutions.ps5200.desc">
-                            Unified Block & File Storage อัจฉริยะ Low Latency เหมาะกับ VM และ Database
+                            Workloads: VM, Database, Containers, Transactional workloads
                         </p>
-                        <a href="https://www.delltechnologies.com/asset/en-us/products/storage/technical-support/dell-powerstore-spec-sheet.pdf" 
-                           target="_blank"
-                           class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-bold transition border border-white/20">
-                            <i data-lucide="download" class="w-4 h-4 text-blue-200"></i>
-                            <span data-key="solutions.ps5200.specLink">Dell PowerStore 3.0 Spec Sheet</span>
-                        </a>
+                        <div class="flex gap-2">
+                             <span class="text-[10px] bg-blue-800/50 border border-white/20 px-2 py-1 rounded">Unified Storage</span>
+                             <span class="text-[10px] bg-blue-800/50 border border-white/20 px-2 py-1 rounded">AppsON Support</span>
+                        </div>
                     </div>
                     <div class="p-8 flex-grow">
-                        <h4 class="font-bold text-gray-800 mb-4 border-b pb-2 text-sm uppercase tracking-widest">Technical Specifications</h4>
-                        <div class="grid grid-cols-2 gap-y-4 gap-x-6">
-                            <div>
-                                <p class="spec-label">Processor</p>
-                                <p class="spec-value" data-key="solutions.ps5200.specs.0">4 Intel CPUs, 96 Cores</p>
+                        <h4 class="font-bold text-gray-800 mb-6 border-b pb-2 text-sm uppercase tracking-widest" data-key="solutions.modelTitle">ข้อมูล Model ที่แนะนำ</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="model-card border-blue-200">
+                                <p class="spec-label">Entry-Level</p>
+                                <p class="spec-value" data-key="solutions.ps5200.models.0">PowerStore 500T</p>
+                                <p class="text-[10px] text-gray-500">(SMB, สาขาย่อย)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">Max Memory</p>
-                                <p class="spec-value" data-key="solutions.ps5200.specs.1">1152 GB</p>
+                            <div class="model-card border-blue-300">
+                                <p class="spec-label">Mid-Range</p>
+                                <p class="spec-value" data-key="solutions.ps5200.models.1">PowerStore 1000T / 3000T</p>
+                                <p class="text-[10px] text-gray-500">(VM, DB ขนาดกลาง)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">Max Capacity</p>
-                                <p class="spec-value" data-key="solutions.ps5200.specs.2">5.9 PBe / Appliance</p>
+                            <div class="model-card border-blue-500">
+                                <p class="spec-label">High-End</p>
+                                <p class="spec-value" data-key="solutions.ps5200.models.2">PowerStore 5000T - 9000T</p>
+                                <p class="text-[10px] text-gray-500">(Enterprise, Mission-Critical)</p>
                             </div>
-                            <div>
-                                <p class="spec-label">Network Support</p>
-                                <p class="spec-value" data-key="solutions.ps5200.specs.4">10/25/100GbE, 32Gb FC</p>
+                            <div class="model-card border-blue-700">
+                                <p class="spec-label">Virtualized (X Series)</p>
+                                <p class="spec-value" data-key="solutions.ps5200.models.3">PowerStore 5000X - 9000X</p>
+                                <p class="text-[10px] text-gray-500">(ฝัง VMware ESXi ในระบบ)</p>
                             </div>
                         </div>
                     </div>
@@ -354,36 +356,6 @@
                         <i data-lucide="external-link" class="w-5 h-5"></i>
                         <span data-key="moreInfo.cta">ดูผลิตภัณฑ์เพิ่มเติม</span>
                     </a>
-                </div>
-            </div>
-
-            <!-- Stats Strip Card -->
-            <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden mb-12">
-                <div class="grid md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100 text-center">
-                    <div class="p-8 hover:bg-gray-50 transition cursor-default">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Trusted solutions</p>
-                        <p class="text-gray-600 text-xs mb-4">IDC ranked</p>
-                        <p class="text-5xl font-black text-[#007db8] mb-1">#1</p>
-                        <p class="text-[10px] text-gray-400 font-medium">worldwide external storage</p>
-                    </div>
-                    <div class="p-8 hover:bg-gray-50 transition cursor-default">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Private Cloud</p>
-                        <p class="text-gray-600 text-xs mb-4">Industry’s best</p>
-                        <p class="text-5xl font-black text-[#007db8] mb-1">5:1</p>
-                        <p class="text-[10px] text-gray-400 font-medium">Data reduction guarantee</p>
-                    </div>
-                    <div class="p-8 hover:bg-gray-50 transition cursor-default">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Artificial Intelligence</p>
-                        <p class="text-gray-600 text-xs mb-4">Save up to</p>
-                        <p class="text-5xl font-black text-purple-700 mb-1">63%</p>
-                        <p class="text-[10px] text-gray-400 font-medium">vs public cloud with AI Factory</p>
-                    </div>
-                    <div class="p-8 hover:bg-gray-50 transition cursor-default">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Cyber Resilient</p>
-                        <p class="text-gray-600 text-xs mb-4">Typically</p>
-                        <p class="text-5xl font-black text-blue-900 mb-1">65:1</p>
-                        <p class="text-[10px] text-gray-400 font-medium">Deduplication with PowerProtect</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -434,11 +406,6 @@
                             pureTitle: "ดูแลเฉพาะ Storage Part",
                             pureDesc: "(แบบเดิม หากระบบมีปัญหาต้องแยกประสานงานแต่ละ Vendor)"
                         },
-                        price: { 
-                            name: "ราคาประมาณการ", 
-                            dellTitle: "US$ 150K - 250K+", dellDesc: "(Cluster 3 nodes F710 / ขึ้นกับ SSD และ Region)", 
-                            pureTitle: "US$ 200K+ Ballpark", pureDesc: "(FlashBlade ชุดเริ่มต้น / Solution ราคาสูง)" 
-                        },
                         0: { name: "ความเข้ากันได้", dell: "Validated Design กับ Dell GPU" },
                         1: { name: "สถาปัตยกรรม", dell: "End-to-End NVMe Ecosystem" },
                         5: { name: "การรับประกันลดขนาดข้อมูล", dell: "5:1 Guarantee", pure: "5:1 Guarantee" },
@@ -446,18 +413,17 @@
                 },
                 solutions: {
                     title: "โซลูชันแนะนำจาก Dell Technologies",
-                    subtitle: "รายละเอียดทางเทคนิคและข้อมูลการเสนอราคาสำหรับ Dyson",
+                    subtitle: "รายละเอียดรุ่นที่แนะนำแบ่งตามขนาดและลักษณะการใช้งานสำหรับ Dyson",
+                    modelTitle: "ข้อมูล Model ที่แนะนำ",
                     f710: {
-                        name: "PowerScale F710", tag: "สำหรับ Unstructured Data & AI",
-                        desc: "Scale-out File Storage แบบ All-Flash เหมาะสำหรับงาน Graphic, R&D และ AI Dataset",
-                        specLink: "h15963-ss-powerscale-all-flash-nodes.pdf",
-                        specs: ["AI, GenAI & EDA Workloads", "512 GB", "38 TB - 1.2 PB", "115 TB - 307 PB"]
+                        name: "PowerScale", tag: "Unstructured Data, Graphic & AI",
+                        desc: "Workloads: Graphic, Media, AI, Big Data, Cloud-Native",
+                        models: ["PowerScale F200", "PowerScale F600", "PowerScale F900", "PowerScale F810 / F910", "A300/A3000 & H Series"]
                     },
                     ps5200: {
-                        name: "PowerStore 5200T", tag: "สำหรับ Infra & Scratch Volume",
-                        desc: "Unified Block & File Storage อัจฉริยะ Low Latency เหมาะกับ VM และ Database",
-                        specLink: "Dell PowerStore 3.0 Spec Sheet",
-                        specs: ["4 Intel CPUs, 96 Cores", "1152 GB", "Up to 5.9 PBe / Appliance", "10/25/100GbE, 32Gb FC"]
+                        name: "PowerStore", tag: "VM, Database & Transactional",
+                        desc: "Workloads: VM, Database, Containers, Transactional workloads",
+                        models: ["PowerStore 500T", "PowerStore 1000T / 3000T", "PowerStore 5000T - 9000T", "PowerStore 5000X - 9000X"]
                     }
                 },
                 moreInfo: {
@@ -492,11 +458,6 @@
                             pureTitle: "Storage-only Support",
                             pureDesc: "(Legacy approach: requires coordination across multiple vendors)"
                         },
-                        price: { 
-                            name: "Estimated Price", 
-                            dellTitle: "US$ 150K - 250K+", dellDesc: "(3-node F710 Cluster / Varies by region)", 
-                            pureTitle: "US$ 200K+ Ballpark", pureDesc: "(Entry FlashBlade / High-priced solution)" 
-                        },
                         0: { name: "Compatibility", dell: "Validated Design for Dell GPU" },
                         1: { name: "Architecture", dell: "End-to-End NVMe Ecosystem" },
                         5: { name: "Data reduction guarantee", dell: "5:1 Guarantee", pure: "5:1 Guarantee" },
@@ -504,18 +465,17 @@
                 },
                 solutions: {
                     title: "Recommended Solutions",
-                    subtitle: "Technical specifications and pricing information for Dyson",
+                    subtitle: "Recommended models based on scale and usage characteristics for Dyson",
+                    modelTitle: "Recommended Models",
                     f710: {
-                        name: "PowerScale F710", tag: "For Unstructured Data & AI",
-                        desc: "All-Flash Scale-out File Storage. Ideal for Graphic, R&D, and AI Datasets.",
-                        specLink: "h15963-ss-powerscale-all-flash-nodes.pdf",
-                        specs: ["AI, GenAI & EDA Workloads", "512 GB", "38 TB - 1.2 PB", "115 TB - 307 PB"]
+                        name: "PowerScale", tag: "Unstructured Data, Graphic & AI",
+                        desc: "Workloads: Graphic, Media, AI, Big Data, Cloud-Native",
+                        models: ["PowerScale F200", "PowerScale F600", "PowerScale F900", "PowerScale F810 / F910", "A300/A3000 & H Series"]
                     },
                     ps5200: {
-                        name: "PowerStore 5200T", tag: "For Infra & Scratch Volumes",
-                        desc: "Intelligent Unified Block & File Storage. Ideal for VMs and Databases.",
-                        specLink: "Dell PowerStore 3.0 Spec Sheet",
-                        specs: ["4 Intel CPUs, 96 Cores", "1152 GB", "Up to 5.9 PBe / Appliance", "10/25/100GbE, 32Gb FC"]
+                        name: "PowerStore", tag: "VM, Database & Transactional",
+                        desc: "Workloads: VM, Database, Containers, Transactional workloads",
+                        models: ["PowerStore 500T", "PowerStore 1000T / 3000T", "PowerStore 5000T - 9000T", "PowerStore 5000X - 9000X"]
                     }
                 },
                 moreInfo: {
@@ -532,11 +492,24 @@
         function updateContent(lang) {
             currentLang = lang;
             const getNestedValue = (obj, path) => path.split('.').reduce((prev, curr) => prev ? prev[curr] : null, obj);
+            
+            // Standard text updates
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 const value = getNestedValue(content[lang], key);
-                if (value) el.textContent = value;
+                
+                // Handle normal text or arrays (like models)
+                if (Array.isArray(value)) {
+                    // Logic to update model values based on index
+                    const index = key.split('.').pop();
+                    if (!isNaN(index)) {
+                         el.textContent = value[index] || "";
+                    }
+                } else if (value) {
+                    el.textContent = value;
+                }
             });
+            
             document.getElementById('lang-label-desktop').textContent = lang === 'th' ? 'EN' : 'TH';
             document.getElementById('lang-toggle-mobile').textContent = lang === 'th' ? 'Switch to English' : 'เปลี่ยนเป็นภาษาไทย';
         }
